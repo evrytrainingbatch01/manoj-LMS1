@@ -1,0 +1,14 @@
+<div class="row">
+  <div class=" col-lg-6 col-md-6 col-sm-6 col-6 ">
+      <div class="" appHighlightBoxHeader appMouseOver><b>Book list</b></div><br>
+      <div class="panel-body">
+          <select  (change)="ChangingValue($event)" >
+              <option  *ngFor="let list of booksList" >{{list}}</option>
+            </select><br>
+          <p *ngIf=bookprasent> Book <b>{{bookadded123}}</b> is added to Cart</p>
+      </div>
+    </div>
+<div class=" col-lg-6 col-md-6 col-sm-6 col-6 panel panel-primary" >
+  <app-book-information (bookadded)='displayAddedBook($event)' [selectedBook]="selectedBook" [selectedBookinfo]="selectedBookinfo"></app-book-information>
+  </div>
+</div>

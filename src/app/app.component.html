@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div style="text-align:center">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <h1 style="color: white ;text-align: center" appMouseOver> Welcome to {{ title }}</h1>
+    <p style="color: white ;text-align: center ;float: left;left: 33%;" class="col-md-3" appMouseOver><b>{{date | date:'d/M/y'}}-{{time}}</b></p>
+  </nav>
+</div>
+<h2 style="text-align: center"> -- Details of Books-- </h2>
+<app-book-details [firstname]='firstname' [lastname]='lastname'> </app-book-details><br><br>
+<div style="text-align:center">
+  <div appBackGruondHighlighter class="card col-md-6" style="width: 50% ;left: 25%;">
+
+    profile:<p><b>{{firstname}} {{lastname}}</b></p>
+  </div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
